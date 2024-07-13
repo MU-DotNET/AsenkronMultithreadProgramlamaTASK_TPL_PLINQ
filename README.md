@@ -1,0 +1,1 @@
+# AsenkronMultithreadProgramlamaTASK_TPL_PLINQ
