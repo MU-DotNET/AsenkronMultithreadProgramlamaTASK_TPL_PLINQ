@@ -10,7 +10,14 @@ namespace TaskFormApp
 
         private async void btnReadFile_Click(object sender, EventArgs e)
         {
-            richTextBoxFile.Text = await ReadFileAsync();
+            string data = string.Empty;
+
+            Task<string> okuma = ReadFileAsync();
+
+            richTextBoxProcess.Text = await new HttpClient().GetStringAsync(new Uri("https://www.google.com"));
+
+            data = await okuma;
+            richTextBoxFile.Text = data;
         }
 
         private void btnCounter_Click(object sender, EventArgs e)
@@ -29,11 +36,11 @@ namespace TaskFormApp
         private async Task<string> ReadFileAsync()
         {
             using StreamReader s = new("file.txt");
-            Task<string> myTask= s.ReadToEndAsync();
+            Task<string> myTask = s.ReadToEndAsync();
             await Task.Delay(5000);
 
             string data = await myTask;
             return data;
-        } 
+        }
     }
 }

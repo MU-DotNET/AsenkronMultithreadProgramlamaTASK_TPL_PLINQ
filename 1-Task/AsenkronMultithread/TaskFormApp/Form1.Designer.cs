@@ -32,6 +32,7 @@
             Button btnCounter;
             richTextBoxFile = new RichTextBox();
             txtCounter = new TextBox();
+            richTextBoxProcess = new RichTextBox();
             btnReadFile = new Button();
             btnCounter = new Button();
             SuspendLayout();
@@ -46,14 +47,6 @@
             btnReadFile.UseVisualStyleBackColor = true;
             btnReadFile.Click += btnReadFile_Click;
             // 
-            // richTextBoxFile
-            // 
-            richTextBoxFile.Location = new Point(12, 60);
-            richTextBoxFile.Name = "richTextBoxFile";
-            richTextBoxFile.Size = new Size(176, 161);
-            richTextBoxFile.TabIndex = 1;
-            richTextBoxFile.Text = "";
-            // 
             // btnCounter
             // 
             btnCounter.Location = new Point(320, 12);
@@ -64,6 +57,14 @@
             btnCounter.UseVisualStyleBackColor = true;
             btnCounter.Click += btnCounter_Click;
             // 
+            // richTextBoxFile
+            // 
+            richTextBoxFile.Location = new Point(12, 60);
+            richTextBoxFile.Name = "richTextBoxFile";
+            richTextBoxFile.Size = new Size(176, 161);
+            richTextBoxFile.TabIndex = 1;
+            richTextBoxFile.Text = "";
+            // 
             // txtCounter
             // 
             txtCounter.Location = new Point(311, 60);
@@ -71,11 +72,20 @@
             txtCounter.Size = new Size(144, 23);
             txtCounter.TabIndex = 3;
             // 
+            // richTextBoxProcess
+            // 
+            richTextBoxProcess.Location = new Point(556, 60);
+            richTextBoxProcess.Name = "richTextBoxProcess";
+            richTextBoxProcess.Size = new Size(176, 161);
+            richTextBoxProcess.TabIndex = 4;
+            richTextBoxProcess.Text = "";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(richTextBoxProcess);
             Controls.Add(txtCounter);
             Controls.Add(btnCounter);
             Controls.Add(richTextBoxFile);
@@ -91,5 +101,6 @@
         private Button btnReadFile;
         private RichTextBox richTextBoxFile;
         private TextBox txtCounter;
+        private RichTextBox richTextBoxProcess;
     }
 }
