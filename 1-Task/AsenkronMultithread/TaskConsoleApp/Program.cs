@@ -1,4 +1,4 @@
 ﻿using TaskConsoleApp;
 
-WhenAll whenAll = new();
-await whenAll.WhenAllAsync();
+WhenAny whenAny = new();
+await whenAny.WhenAnyAsync();
