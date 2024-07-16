@@ -12,7 +12,7 @@ namespace TaskFormApp
         {
             string data = string.Empty;
 
-            Task<string> okuma = ReadFileAsync();
+            Task<string> okuma = ReadFileAsync2();
 
             richTextBoxProcess.Text = await new HttpClient().GetStringAsync(new Uri("https://www.google.com"));
 
@@ -41,6 +41,12 @@ namespace TaskFormApp
 
             string data = await myTask;
             return data;
+        }
+
+        private Task<string> ReadFileAsync2()
+        {
+            using StreamReader s = new("file.txt");
+            return s.ReadToEndAsync();
         }
     }
 }
