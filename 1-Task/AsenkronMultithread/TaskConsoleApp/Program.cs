@@ -1,4 +1,4 @@
 ﻿using TaskConsoleApp;
 
-WaitAll waitAll = new();
-await waitAll.WaitAllAsync();
+WaitAny waitAny = new();
+await waitAny.WaitAnyAsync();
