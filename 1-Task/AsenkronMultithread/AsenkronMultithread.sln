@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResultFormApp", "ResultForm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskInstanceProperties", "TaskInstanceProperties\TaskInstanceProperties.csproj", "{9C0A638E-15F8-4011-B6DC-56A8F5404966}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueTask", "ValueTask\ValueTask.csproj", "{C2C6C4D5-E529-4B3E-A5A8-CC7A0A768BA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{9C0A638E-15F8-4011-B6DC-56A8F5404966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C0A638E-15F8-4011-B6DC-56A8F5404966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C0A638E-15F8-4011-B6DC-56A8F5404966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C6C4D5-E529-4B3E-A5A8-CC7A0A768BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C6C4D5-E529-4B3E-A5A8-CC7A0A768BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C6C4D5-E529-4B3E-A5A8-CC7A0A768BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C6C4D5-E529-4B3E-A5A8-CC7A0A768BA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
