@@ -1,0 +1,6 @@
+@TaskCancellationTokenAPI_HostAddress = http://localhost:5069
+
+GET {{TaskCancellationTokenAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
