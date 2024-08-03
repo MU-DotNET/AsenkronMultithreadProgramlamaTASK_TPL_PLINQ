@@ -47,7 +47,7 @@ namespace ParallelForForeachCancellationToken
                         string content = client.GetStringAsync(url).Result;
                         string data = $"{url} : {content.Length}";
 
-                        cancellationTokenSource.Token.ThrowIfCancellationRequested();
+                        parallelOptions.CancellationToken.ThrowIfCancellationRequested();
                         listBox1.Invoke((MethodInvoker)delegate { listBox1.Items.Add(data); });
                     });
                 }
