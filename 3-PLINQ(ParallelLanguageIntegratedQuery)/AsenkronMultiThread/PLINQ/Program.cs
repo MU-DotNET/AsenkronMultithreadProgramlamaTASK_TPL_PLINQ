@@ -6,8 +6,16 @@ bool Islem(int x)
 
 var array = Enumerable.Range(1,100).ToList();
 
-array.Where(Islem).ToList().ForEach(x => Console.WriteLine(x));
-
 var newArray = array.AsParallel().Where(Islem);
 
-newArray.ToList().ForEach(x => Console.WriteLine(x));
+// newArray.ToList().ForEach(x =>
+// {
+//     Thread.Sleep(500);
+//     Console.WriteLine(x);
+// });
+
+newArray.ForAll(x =>
+{
+    Thread.Sleep(500);
+    Console.WriteLine(x);
+});
