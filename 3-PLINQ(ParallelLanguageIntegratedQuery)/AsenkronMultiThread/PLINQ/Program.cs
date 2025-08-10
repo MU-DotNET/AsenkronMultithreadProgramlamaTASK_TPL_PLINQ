@@ -1,21 +1,4 @@
-﻿
-bool Islem(int x)
-{
-    return x % 2 == 0;
-}
+﻿using PLINQ.Context;
 
-var array = Enumerable.Range(1,100).ToList();
-
-var newArray = array.AsParallel().Where(Islem);
-
-// newArray.ToList().ForEach(x =>
-// {
-//     Thread.Sleep(500);
-//     Console.WriteLine(x);
-// });
-
-newArray.ForAll(x =>
-{
-    Thread.Sleep(500);
-    Console.WriteLine(x);
-});
+MyDbContext context = new MyDbContext();
+context.Products.Take(10).ToList().ForEach(x => Console.WriteLine(x.Name));
