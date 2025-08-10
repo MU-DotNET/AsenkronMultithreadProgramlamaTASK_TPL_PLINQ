@@ -23,7 +23,9 @@ MyDbContext context = new MyDbContext();
 
 //context.Products.AsParallel().WithDegreeOfParallelism(2).ForAll(p => WriteLog(p));
 
-context.Products.AsParallel().WithExecutionMode(ParallelExecutionMode.ForceParallelism).ForAll(p => WriteLog(p));
+// context.Products.AsParallel().WithExecutionMode(ParallelExecutionMode.ForceParallelism).ForAll(p => WriteLog(p));
+
+context.Products.AsParallel().AsOrdered().Where(p => p.ListPrice > 10M).ToList().ForEach(p => Console.WriteLine($"{p.Name} -  {p.ListPrice}"));
 
 void WriteLog(Product product)
 {
